@@ -1,95 +1,316 @@
 <!DOCTYPE html>
-  <!-- DASHBOARD -->
-  <div class="dashboard-grid">
+<html lang="en">
 
-    <div class="dashboard-card">
-      <p>Total Wallet</p>
-      <h1>₹50,000</h1>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="dashboard-card">
-      <p>Active Bets</p>
-      <h1>14</h1>
-    </div>
+  <title>BetX - Luxury Betting</title>
 
-    <div class="dashboard-card">
-      <p>Total Wins</p>
-      <h1>₹1,25,000</h1>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+
+  <!-- INTRO SCREEN -->
+
+  <div class="intro-screen" id="intro">
+
+    <div class="intro-logo">
+
+      <div class="logo-circle"></div>
+
+      <h1>BetX</h1>
+
+      <p>Luxury Betting Experience</p>
+
     </div>
 
   </div>
 
 
-  <!-- BETTING SLIP -->
-  <div class="betting-slip">
 
-    <div class="betting-header">
-      <h2>Betting Slip</h2>
+  <!-- PARTICLES -->
+
+  <div class="particles"></div>
+
+
+
+  <!-- SIDEBAR -->
+
+  <div class="sidebar">
+
+    <div class="brand">
+
+      <div class="brand-logo"></div>
+
+      <h1>BetX</h1>
+
     </div>
 
-    <div class="betting-body">
-      <p>No bets selected</p>
-    </div>
+
+    <ul>
+
+      <li class="active">
+        <i class="fa-solid fa-house"></i>
+        Home
+      </li>
+
+      <li>
+        <i class="fa-solid fa-chart-line"></i>
+        Live Betting
+      </li>
+
+      <li>
+        <i class="fa-solid fa-wallet"></i>
+        Wallet
+      </li>
+
+      <li>
+        <i class="fa-solid fa-user"></i>
+        Profile
+      </li>
+
+      <li>
+        <i class="fa-solid fa-shield"></i>
+        Admin Panel
+      </li>
+
+    </ul>
 
   </div>
 
 
-  <!-- CHARTS -->
-  <div class="chart-section">
 
-    <div class="chart-card">
-      <h2>Winning Statistics</h2>
+  <!-- MAIN -->
 
-      <div class="bars">
-        <div class="bar one"></div>
-        <div class="bar two"></div>
-        <div class="bar three"></div>
-        <div class="bar four"></div>
+  <div class="main-container">
+
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+      <div class="nav-left">
+        <h2>Live Cricket Betting</h2>
       </div>
+
+
+      <div class="nav-right">
+
+        <button class="login-btn" onclick="openLogin()">
+          Login
+        </button>
+
+        <button class="signup-btn" onclick="openSignup()">
+          Sign Up
+        </button>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- HERO SECTION -->
+
+    <div class="hero-section">
+
+      <div class="hero-content">
+
+        <h1>
+          Premium Live
+          <span>Betting Experience</span>
+        </h1>
+
+        <p>
+          Real-time odds, live matches, luxury interface &
+          smooth betting experience.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- LIVE MATCHES -->
+
+    <div class="section-header">
+      <h2>Live Matches</h2>
+    </div>
+
+
+    <div class="matches-grid">
+
+      <!-- LIVE API MATCHES WILL COME HERE -->
+
+    </div>
+
+
+
+    <!-- DASHBOARD -->
+
+    <div class="dashboard-grid">
+
+      <div class="dashboard-card">
+
+        <p>Total Wallet</p>
+
+        <h1>₹50,000</h1>
+
+      </div>
+
+
+      <div class="dashboard-card">
+
+        <p>Active Bets</p>
+
+        <h1>14</h1>
+
+      </div>
+
+
+      <div class="dashboard-card">
+
+        <p>Total Wins</p>
+
+        <h1>₹1,25,000</h1>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- BETTING SLIP -->
+
+    <div class="betting-slip">
+
+      <div class="betting-header">
+        <h2>Betting Slip</h2>
+      </div>
+
+
+      <div class="betting-body">
+        <p>No bets selected</p>
+      </div>
+
+    </div>
+
+
+
+    <!-- CHART SECTION -->
+
+    <div class="chart-section">
+
+      <div class="chart-card">
+
+        <h2>Winning Statistics</h2>
+
+
+        <div class="bars">
+
+          <div class="bar one"></div>
+
+          <div class="bar two"></div>
+
+          <div class="bar three"></div>
+
+          <div class="bar four"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- WALLET POPUP -->
+
+    <div class="wallet-popup">
+
+      <div class="wallet-card">
+
+        <h2>Wallet Balance</h2>
+
+        <h1>₹50,000</h1>
+
+        <button>Add Money</button>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- LOGIN POPUP -->
+
+  <div class="popup" id="loginPopup">
+
+    <div class="popup-content">
+
+      <span class="close" onclick="closeLogin()">
+        &times;
+      </span>
+
+      <h1>Login</h1>
+
+      <input type="email" placeholder="Email">
+
+      <input type="password" placeholder="Password">
+
+      <button>
+        Login
+      </button>
+
     </div>
 
   </div>
 
 
-</div>
 
+  <!-- SIGNUP POPUP -->
 
-<!-- LOGIN POPUP -->
-<div class="popup" id="loginPopup">
+  <div class="popup" id="signupPopup">
 
-  <div class="popup-content">
+    <div class="popup-content">
 
-    <span class="close" onclick="closeLogin()">&times;</span>
+      <span class="close" onclick="closeSignup()">
+        &times;
+      </span>
 
-    <h1>Login</h1>
+      <h1>Create Account</h1>
 
-    <input type="email" placeholder="Email">
+      <input type="text" placeholder="Full Name">
 
-    <input type="password" placeholder="Password">
+      <input type="email" placeholder="Email">
 
-    <button>Login</button>
+      <input type="password" placeholder="Password">
 
-  </div>
+      <button>
+        Create Account
+      </button>
 
-</div>
-
-
-<!-- SIGNUP POPUP -->
-<div class="popup" id="signupPopup">
-
-  <div class="popup-content">
-
-    <span class="close" onclick="closeSignup()">&times;</span>
-
-    <h1>Create Account</h1>
-
-    <input type="text" placeholder="Full Name">
-
-    <input type="email" placeholder="Email">
-
-    <input type="password" placeholder="Password">
-
-    <button>Create Account</button>
+    </div>
 
   </div>
+
+
+
+  <!-- SCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+
 </html>

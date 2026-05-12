@@ -11,7 +11,8 @@ body {
   overflow-x: hidden;
 }
 
-/* INTRO */
+/* INTRO SCREEN */
+
 .intro-screen {
   position: fixed;
   width: 100%;
@@ -35,7 +36,7 @@ body {
   height: 120px;
   border-radius: 50%;
   margin: auto;
-  background: linear-gradient(45deg,#fff,#666);
+  background: linear-gradient(45deg, #fff, #666);
   margin-bottom: 20px;
   box-shadow: 0 0 50px rgba(255,255,255,0.5);
 }
@@ -51,6 +52,7 @@ body {
 }
 
 /* PARTICLES */
+
 .particles::before,
 .particles::after {
   content: '';
@@ -59,6 +61,7 @@ body {
   height: 200%;
   background-image:
   radial-gradient(white 1px, transparent 1px);
+
   background-size: 50px 50px;
   opacity: 0.05;
   animation: moveParticles 30s linear infinite;
@@ -66,6 +69,7 @@ body {
 }
 
 /* SIDEBAR */
+
 .sidebar {
   width: 260px;
   height: 100vh;
@@ -73,4 +77,490 @@ body {
   border-right: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(20px);
   position: fixed;
+  left: 0;
+  top: 0;
+  padding: 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.brand-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg,#fff,#444);
+}
+
+.brand h1 {
+  font-size: 32px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.sidebar ul li:hover,
+.sidebar ul .active {
+  background: white;
+  color: black;
+  transform: translateX(6px);
+}
+
+/* MAIN */
+
+.main-container {
+  margin-left: 260px;
+  padding: 30px;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 14px 26px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+  font-weight: bold;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+}
+
+.signup-btn {
+  background: white;
+  color: black;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  transform: translateY(-4px);
+}
+
+/* HERO */
+
+.hero-section {
+  height: 320px;
+  border-radius: 30px;
+  background:
+  linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+  url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1200');
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  line-height: 1.1;
+}
+
+.hero-content span {
+  color: #999;
+}
+
+.hero-content p {
+  margin-top: 20px;
+  color: #ccc;
+  width: 500px;
+}
+
+/* MATCHES */
+
+.section-header {
+  margin-bottom: 25px;
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+}
+
+.match-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 30px;
+  padding: 30px;
+  backdrop-filter: blur(20px);
+  transition: 0.5s;
+}
+
+.match-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(255,255,255,0.05);
+}
+
+.live-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.live-badge span {
+  width: 10px;
+  height: 10px;
+  background: #00ff88;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team {
+  text-align: center;
+}
+
+.team img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.vs {
+  font-size: 30px;
+  color: gray;
+}
+
+.score-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.score-section h1 {
+  font-size: 50px;
+}
+
+.score-section p {
+  color: gray;
+}
+
+.odds-section {
+  display: flex;
+  gap: 15px;
+}
+
+.odds-section button {
+  flex: 1;
+  padding: 18px;
+  border: none;
+  border-radius: 16px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.odds-section button:hover {
+  transform: scale(1.04);
+}
+
+/* DASHBOARD */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.dashboard-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 30px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.dashboard-card p {
+  color: gray;
+}
+
+.dashboard-card h1 {
+  margin-top: 15px;
+  font-size: 42px;
+}
+
+/* BETTING SLIP */
+
+.betting-slip {
+  margin-top: 50px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 30px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* CHART */
+
+.chart-section {
+  margin-top: 50px;
+}
+
+.chart-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 30px;
+  padding: 30px;
+}
+
+.bars {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  height: 250px;
+}
+
+.bar {
+  flex: 1;
+  background: white;
+  border-radius: 20px 20px 0 0;
+}
+
+.one {
+  height: 120px;
+}
+
+.two {
+  height: 200px;
+}
+
+.three {
+  height: 160px;
+}
+
+.four {
+  height: 230px;
+}
+
+/* POPUP */
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  width: 400px;
+  background: #111;
+  padding: 40px;
+  border-radius: 30px;
+  position: relative;
+  animation: popup 0.4s ease;
+}
+
+.popup-content h1 {
+  margin-bottom: 25px;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 14px;
+  background: #1d1d1d;
+  color: white;
+}
+
+.popup-content button {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 14px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/* WALLET */
+
+.wallet-popup {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+.wallet-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+}
+
+.wallet-card h1 {
+  margin: 15px 0;
+  font-size: 42px;
+}
+
+.wallet-card button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+/* ANIMATIONS */
+
+@keyframes blink {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes moveParticles {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes hideIntro {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px) {
+
+  .matches-grid,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+  }
+}
+
+@media(max-width:850px) {
+
+  .sidebar {
+    width: 90px;
+    padding: 20px 10px;
+  }
+
+  .brand h1,
+  .sidebar ul li {
+    font-size: 0;
+  }
+
+  .main-container {
+    margin-left: 90px;
+  }
+
+  .hero-section {
+    padding: 30px;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 35px;
+  }
+
+  .hero-content p {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .wallet-popup {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 40px;
+  }
 }
